@@ -6,15 +6,18 @@
 package ec.edu.intsuperior.vista;
 
 import ec.edu.intsuperior.controlador.Conexion;
+import static ec.edu.intsuperior.controlador.Conexion.conexion;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
  * @author USUARIO
  */
 public class Aplicacion {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         
         Conexion.conexion();
-        
+          Statement stm= conexion().createStatement();
     }
 }
